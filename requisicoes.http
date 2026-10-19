@@ -1,0 +1,59 @@
+### Teste 1 — nome vazio
+POST http://localhost:8080/usuarios
+Content-Type: application/json
+
+{
+  "nome": "",
+  "email": "joao@email.com",
+  "senha": "senha123"
+}
+
+### Teste 2 — nome curto
+POST http://localhost:8080/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Jo",
+  "email": "joao@email.com",
+  "senha": "senha123"
+}
+
+### Teste 3 — email inválido
+POST http://localhost:8080/usuarios
+Content-Type: application/json
+
+{
+  "nome": "João",
+  "email": "email-invalido",
+  "senha": "senha123"
+}
+
+### Teste 4 — senha curta
+POST http://localhost:8080/usuarios
+Content-Type: application/json
+
+{
+  "nome": "João",
+  "email": "joao@email.com",
+  "senha": "12345"
+}
+
+### Teste 5 — senha sem número
+POST http://localhost:8080/usuarios
+Content-Type: application/json
+
+{
+  "nome": "João",
+  "email": "joao@email.com",
+  "senha": "senhasemnumero"
+}
+
+### Teste 6 — válido
+POST http://localhost:8080/usuarios
+Content-Type: application/json
+
+{
+  "nome": "João",
+  "email": "joao@email.com",
+  "senha": "senha123"
+}
